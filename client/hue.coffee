@@ -1,7 +1,9 @@
-Lights = new Mongo.Collection("lights");
+Lights = new Mongo.Collection("lights")
+
+currentPage = "lightList"
 
 Template.body.helpers
-  pageTemplate: "lightList"  
+  pageTemplate: currentPage
 
 Template.lightList.helpers
   lights: ->
