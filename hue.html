@@ -1,0 +1,26 @@
+<head>
+  <title>Hue Pi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1>Hue Pi</h1>
+  </header>
+
+  <div id="container">
+    {{> UI.dynamic template=pageTemplate}}
+  </div>
+
+</body>
+
+<template name="lightList">
+  <ul id="light-list">
+    {{#each lights}}
+      <li><a href="" data-id="{{id}}">{{name}}</a></li>
+    {{/each}}
+  </ul>
+</template>

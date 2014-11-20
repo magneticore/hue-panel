@@ -1,0 +1,39 @@
+@import 'reset';
+
+body {
+  background:#eee;
+}
+
+header {
+  background:#222;
+  color:#fff;
+  height:50px;
+  h1 {
+    line-height:50px;
+    margin:0 auto;
+    padding:0 16px;
+    text-align:center;
+  }
+}
+
+#container {
+  background:#fff;
+  overflow:hidden;
+  padding:0;
+}
+
+#light-list {
+  margin:0;
+  padding:0;
+  li {
+    margin:0;
+    padding:0;
+    list-style:none;
+    a {
+      display:block;
+      border-bottom:1px solid #ccc;
+      margin:0;
+      padding:0.5em 1em;
+    }
+  }
+}
