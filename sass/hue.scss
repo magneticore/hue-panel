@@ -56,7 +56,7 @@ header {
   position:fixed;
   width:100%;
   a {
-    background:#34495e;
+    background:#8e44ad;
     color:#fff;
     display:block;
     float:left;
@@ -65,7 +65,7 @@ header {
     line-height:40px;
     text-align:center;
     text-decoration:none;
-    width:50%;
+    width:33%;
     &.all-on {
       background:#16a085;
       &:active {
@@ -80,3 +80,109 @@ header {
     }
   }
 }
+
+h3 {
+  background:#8e44ad;
+  color:#fff;
+  font-size:100%;
+  margin:0;
+  padding:0.5em 0;
+  text-align:center;
+}
+
+i.status {
+  background:#000;
+  border-radius:100%;
+  color:#fff;
+  font-weight:bold;
+  height:30px;
+  line-height:30px;
+  position:absolute;
+  right:0.6em;
+  text-align:center;
+  top:0.6em;
+  width:30px;
+  &.unreachable {
+    background:#e74c3c;
+  }
+  &.reachable {
+    background:#27ae60;
+  }
+}
+
+.panel {
+  padding:1em;
+  .setting {
+    margin-bottom:2em;
+    overflow:hidden;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none !important;
+    border:none;
+    background-color: #bdc3c7;
+    background-position:top left;
+    background-repeat:no-repeat;
+    background-size:100% 40px;
+    display: inline-block;
+    float:left;
+    height: 40px;
+    width: 100%;
+    &.hue-range {
+      background-image:url(/ranges/spectrum.png);
+    }
+    &.saturation-range {
+      background-image:url(/ranges/saturation.png);
+    }
+    &.brightness-range {
+      background-image:url(/ranges/brightness.png);
+    }
+  }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    border:none;
+    background:#fff;
+    border:1px solid #000;
+    border-radius:100%;
+    height: 28px;
+    position:relative;
+    width: 28px;
+  }
+
+  h5 {
+    color:#aaa;
+    font-size:0.8;
+    font-weight:normal;
+    text-transform:uppercase;
+  }
+
+  .buttons {
+    overflow:hidden;
+    a {
+      background:#8e44ad;
+      color:#fff;
+      display:block;
+      float:left;
+      font-weight:bold;
+      height:40px;
+      line-height:40px;
+      text-align:center;
+      text-decoration:none;
+      width:33%;
+      &.bulb-on {
+        background:#27ae60;
+        &:active {
+          background:darken(#27ae60, 20%);
+        }
+      }
+      &.bulb-off {
+        background:#e74c3c;
+        &:active {
+          background:darken(#e74c3c, 20%);
+        }
+      }
+    }
+  }
+}
+
+
