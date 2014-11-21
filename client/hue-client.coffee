@@ -14,12 +14,10 @@ Template.lightList.helpers
 
 Template.bulbPanel.helpers
   bulb: ->
-    bulb = Lights.findOne( {id: Session.get("currentBulb")})
-    return bulb
+    return Lights.findOne( {id: Session.get("currentBulb")})
 
 Template.body.events
-  'click header h1': (evt) ->
-    evt.preventDefault()
+  'click header h1': ->
     Session.set("currentBulb", null)
     Session.set("currentPage", "lightList")
 
@@ -35,7 +33,7 @@ Template.body.events
     evt.preventDefault()
     Meteor.call 'allDefault'
 
-  'click li a': (evt) ->
+  'click #light-list a': (evt) ->
     evt.preventDefault()
     Session.set("currentBulb", this.id)
     Session.set("currentPage", "bulbPanel")
@@ -52,13 +50,13 @@ Template.bulbPanel.events
     }
     Meteor.call "setBulb", data
 
-  'click a.bulb-off': (evt) ->
-    evt.preventDefault()
-    Meteor.call "bulbOff", Session.get("currentBulb")
-
   'click a.bulb-on': (evt) ->
     evt.preventDefault()
     Meteor.call "bulbOn", Session.get("currentBulb")
+
+  'click a.bulb-off': (evt) ->
+    evt.preventDefault()
+    Meteor.call "bulbOff", Session.get("currentBulb")
 
   'click a.bulb-default': (evt) ->
     evt.preventDefault()
