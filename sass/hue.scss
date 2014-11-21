@@ -1,13 +1,18 @@
 @import 'reset';
 
 body {
-  background:#eee;
+  background:#2c3e50;
+  padding:50px 0 40px 0;
 }
 
 header {
-  background:#222;
+  background:#2980b9;
   color:#fff;
   height:50px;
+  left:0;
+  position:fixed;
+  top:0;
+  width:100%;
   h1 {
     line-height:50px;
     margin:0 auto;
@@ -34,6 +39,44 @@ header {
       border-bottom:1px solid #ccc;
       margin:0;
       padding:0.5em 1em;
+      &:hover {
+        background:#ecf0f1;
+      }
+      &:active {
+        background:darken(#ecf0f1, 20%);
+      }
+    }
+  }
+}
+
+#on-off {
+  bottom:0;
+  left:0;
+  overflow:hidden;
+  position:fixed;
+  width:100%;
+  a {
+    background:#34495e;
+    color:#fff;
+    display:block;
+    float:left;
+    font-weight:bold;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    text-decoration:none;
+    width:50%;
+    &.all-on {
+      background:#16a085;
+      &:active {
+        background:darken(#16a085, 20%);
+      }
+    }
+    &.all-off {
+      background:#e74c3c;
+      &:active {
+        background:darken(#e74c3c, 20%);
+      }
     }
   }
 }
