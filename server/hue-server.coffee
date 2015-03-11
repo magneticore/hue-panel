@@ -25,17 +25,17 @@ Meteor.methods
         Lights.upsert({id: k}, v)
 
   allOn: ->
-    url = "http://#{bridge.local_ip}/api/#{bridge.hue_user}/groups/1/action"
+    url = "http://#{bridge.local_ip}/api/#{bridge.hue_user}/groups/0/action"
     Meteor.http.call "PUT", url, { content: onState }
     Meteor.call "setLightsData"
 
   allOff: ->
-    url = "http://#{bridge.local_ip}/api/#{bridge.hue_user}/groups/1/action"
+    url = "http://#{bridge.local_ip}/api/#{bridge.hue_user}/groups/0/action"
     Meteor.http.call "PUT", url, { content: offState }
     Meteor.call "setLightsData"
 
   allDefault: ->
-    url = "http://#{bridge.local_ip}/api/#{bridge.hue_user}/groups/1/action"
+    url = "http://#{bridge.local_ip}/api/#{bridge.hue_user}/groups/0/action"
     Meteor.http.call "PUT", url, { content: defaultState }
     Meteor.call "setLightsData"
 
